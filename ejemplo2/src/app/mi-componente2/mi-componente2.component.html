@@ -1,0 +1,10 @@
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Ejemplo de Propiedad Binding</h1>
+    <button [disabled]="habilitado">No puedes Enviar</button>
+
+    <br>
+    <br>
+    <button (click)="toggleHabilitado()">
+        {{ habilitado ? 'Habilitar boton': 'deshabilitar boton'}}
+    </button>
+</div>
