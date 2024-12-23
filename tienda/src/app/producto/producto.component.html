@@ -1,0 +1,37 @@
+<div class="producto-card">
+    <img [src]="producto.imagen" [alt]="producto.nombre" />
+
+    <div class="producto-info">
+        <h2>{{ producto.nombre }}</h2>
+        <p class="precio">{{ producto.precio }}</p>
+        <p class="descripcion">{{ producto.descripcion }}</p>
+
+        <div class="estado">
+            <div class="contenedor-estado-carrito">
+                <p
+                    [class.disponible]="producto.disponible"
+                    [class.no-disponible]="!producto.disponible"
+                >
+                    Estado:
+                    {{ producto.disponible ? "Disponible" : "No disponible" }}
+                </p>
+
+                <button
+                    class="btn-carrito"
+                    [class.disabled]="!producto.disponible"
+                    [disabled]="!producto.disponible"
+                >
+                    {{
+                        producto.disponible
+                            ? "Agregar al carrito"
+                            : "No disponible"
+                    }}
+                </button>
+            </div>
+
+            <button class="btn-cambiar" (click)="toggleDisponibilidad()">
+                Cambiar Disponibilidad
+            </button>
+        </div>
+    </div>
+</div>

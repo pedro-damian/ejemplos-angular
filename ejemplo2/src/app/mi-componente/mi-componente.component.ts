@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './mi-componente.component.css'
 })
 export class MiComponenteComponent {
-  mensaje = 'estoy en mi componente';
+  mensaje = 'Hola soy un mensaje';
 }

@@ -10,4 +10,5 @@ import { CicloVidaComponent } from './ciclo-vida/ciclo-vida.component';
 })
 export class AppComponent {
   title = 'ejemplo3';
+  mostrar = true;
 }
