@@ -1,21 +1,22 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-ciclo-vida',
+  selector: "app-ciclo-vida",
   imports: [],
-  templateUrl: './ciclo-vida.component.html',
-  styleUrl: './ciclo-vida.component.css'
+  templateUrl: "./ciclo-vida.component.html",
+  styleUrl: "./ciclo-vida.component.css",
 })
-export class CicloVidaComponent implements OnInit, OnDestroy{
-  constructor(){
-    console.log('El componente se esta creando');
+export class CicloVidaComponent implements OnInit, OnDestroy {
+  mostrar: boolean = true;
+
+  constructor() {
+    console.log("El componente se esta creando");
   }
   ngOnInit(): void {
-    console.log('se ha inicializado')
+    console.log("se ha inicializado");
   }
 
   ngOnDestroy(): void {
-    console.log('el componente se ha destruido')
+    console.log("el componente se ha destruido");
   }
-  
 }
