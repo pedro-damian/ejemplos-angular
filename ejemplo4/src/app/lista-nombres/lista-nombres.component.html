@@ -1,0 +1,24 @@
+<div style="text-align: center; margin-top: 20px">
+  <h1>Lista de Nombres</h1>
+
+  <p *ngIf="nombres.length === 0">No hay Nombres en la lista</p>
+  <ul *ngIf="nombres.length > 0">
+    <li
+      *ngFor="let nombre of nombres; let i = index"
+      [ngStyle]="{ color: i % 2 === 0 ? 'blue' : 'green' }" 
+    >
+      {{ nombre }}
+
+      <!-- <strong [ngSwitch]="tarea.prioridad">
+        <span *ngSwitchCase="'alta'" style="color: red">Prioridad Alta</span>
+        <span *ngSwitchCase="'media'" style="color: yellow">Prioridad Media</span>
+        <span *ngSwitchCase="'baja'" style="color: green">Prioridad Baja</span>
+        <span *ngSwitchDefault> Sin Prioridad</span>
+      </strong> -->
+
+      <!-- <button (click)="cambiarEstado(tarea)" style="margin-left: 10px;">
+        {{tarea.completada ? 'Desmarcar': 'completar'}}
+      </button> -->
+    </li>
+  </ul>
+</div>

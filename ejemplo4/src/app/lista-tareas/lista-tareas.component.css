@@ -1,0 +1,28 @@
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+li{
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #ccc;
+}
+
+li.completada{
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: aquamarine;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color:aqua;
+}
