@@ -1,0 +1,21 @@
+<h2>Ejemplo de Directivas</h2>
+
+<h3>ngIf Example:</h3>
+
+<div *ngIf="mostrarElemento">Este elemento se muestra con ngIf</div>
+
+<h3>ngFor Example:</h3>
+
+<ul>
+  <li *ngFor="let item of listaItems">{{ item }}</li>
+</ul>
+
+<h3>ngSwitch Example:</h3>
+
+<div [ngSwitch]="estado">
+  <p *ngSwitchCase="'activo'">El estado es activo</p>
+
+  <p *ngSwitchCase="'inactivo'">El estado es inactivo</p>
+
+  <p *ngSwitchDefault>El estado no se reconoce</p>
+</div>
