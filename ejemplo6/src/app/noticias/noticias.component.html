@@ -2,33 +2,18 @@
     <h1>Noticias</h1>
 
     <div class="noticias-list">
-        <article class="noticia-item">
+        <article
+            *ngFor="let noticia of noticias; let i = index"
+            class="noticia-item"
+        >
             <div class="noticia-contenido">
-                <p>La NASA anuncia nuevo descubrimiento en Marte</p>
-            </div>
-        </article>
-
-        <article class="noticia-item">
-            <div class="noticia-contenido">
-                <p>Avances revolucionarios en energía renovable</p>
-            </div>
-        </article>
-
-        <article class="noticia-item">
-            <div class="noticia-contenido">
-                <p>Descubren nueva especie en el Amazona</p>
-            </div>
-        </article>
-
-        <article class="noticia-item">
-            <div class="noticia-contenido">
-                <p>Avance significativo en la lucha contra el Alzheimer</p>
-            </div>
-        </article>
-
-        <article class="noticia-item">
-            <div class="noticia-contenido">
-                <p>Innovación en tecnología cuántica</p>
+                <p>{{ noticia.titulo }}</p>
+                <button (click)="mostrarContenido(i)">
+                    {{ noticia.mostrar ? "Ocultar" : "Ver más" }}
+                </button>
+                <div [hidden]="!noticia.mostrar" class="content">
+                    <p>{{ noticia.contenido }}</p>
+                </div>
             </div>
         </article>
     </div>

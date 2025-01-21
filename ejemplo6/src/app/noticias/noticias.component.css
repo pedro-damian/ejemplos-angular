@@ -1,0 +1,7 @@
+.article {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.content {
+    display: none;
+}
