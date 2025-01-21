@@ -1,0 +1,52 @@
+nav {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Estilo para el enlace activo */
+nav a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Efecto hover para el enlace activo */
+nav a.active:hover {
+    background-color: #45a049;
+}
+
+/* Diseño responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    nav a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
