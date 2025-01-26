@@ -1,0 +1,8 @@
+<div>
+    <h1>Lista de Posts</h1>
+    <ol>
+        <li *ngFor="let post of posts">
+            <strong>{{ post.title }}</strong> - {{ post.body }}
+        </li>
+    </ol>
+</div>
