@@ -1,0 +1,49 @@
+<div class="container">
+    <h2 class="text-center m-5">Galería de Imágenes</h2>
+
+    <div class="row g-4">
+        @for (imagen of imagenes; track imagen.id) {
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100">
+                    <img
+                        [src]="imagen.url"
+                        class="card-img-top"
+                        [alt]="imagen.titulo"
+                        (click)="abrirModal(imagen)"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ imagen.titulo }}</h5>
+                        <p class="card-text">{{ imagen.descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Modal para mostrar la imagen seleccionada -->
+@if (imagenSeleccionada) {
+    <div class="modal-backdrop show"></div>
+    <div class="modal d-block" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{ imagenSeleccionada.titulo }}</h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        (click)="cerrarModal()"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <img
+                        [src]="imagenSeleccionada.url"
+                        class="img-fluid"
+                        [alt]="imagenSeleccionada.titulo"
+                    />
+                    <p class="mt-3">{{ imagenSeleccionada.descripcion }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

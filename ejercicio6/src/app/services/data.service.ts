@@ -6,9 +6,12 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class DataService {
+  // URL base de la API de JSONPlaceholder
   private baseUrl = "https://jsonplaceholder.typicode.com";
 
   constructor(private http: HttpClient) {}
+
+  // Método para obtener todos los usuarios
   getUsers(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/users`);
   }

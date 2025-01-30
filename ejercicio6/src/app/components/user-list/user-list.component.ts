@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../../services/data.service";
-import { CommonModule } from "@angular/common";
+import { CommonModule } from "@angular/common";   // import CommonModule para usar ngFor y ngIf en el template
 
 @Component({
   selector: "app-user-list",

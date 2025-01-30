@@ -1,0 +1,30 @@
+<div class="contenedor-tabla">
+    <div class="busqueda">
+        <input
+            type="text"
+            [(ngModel)]="filtroNombre"
+            (input)="filtrarEstudiantes()"
+            placeholder="Buscar por nombre..."
+            class="campo-busqueda"
+        />
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (estudiante of estudiantesFiltrados; track estudiante.id) {
+                <tr>
+                    <td>{{ estudiante.name }}</td>
+                    <td>{{ estudiante.email }}</td>
+                    <td>{{ estudiante.phone }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

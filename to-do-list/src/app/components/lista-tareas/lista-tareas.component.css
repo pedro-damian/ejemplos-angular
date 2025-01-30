@@ -1,0 +1,48 @@
+.card {
+    margin-top: 2rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.list-group-item {
+    border-radius: 8px !important;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-check-input {
+    cursor: pointer;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.btn-danger {
+    transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+    transform: scale(1.1);
+}
+
+.text-decoration-line-through {
+    color: #6c757d;
+}
+
+.input-group {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.input-group input {
+    border-radius: 8px 0 0 8px;
+}
+
+.input-group .btn {
+    border-radius: 0 8px 8px 0;
+}

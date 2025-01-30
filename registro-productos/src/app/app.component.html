@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Gestión de Productos</h1>
+
+    <button (click)="toggleLista()">
+        {{ mostrarLista ? "Ocultar Productos" : "Mostrar Productos" }}
+    </button>
+
+    @if (mostrarLista) {
+        <app-lista-productos />
+    }
+</div>
+
+<router-outlet />

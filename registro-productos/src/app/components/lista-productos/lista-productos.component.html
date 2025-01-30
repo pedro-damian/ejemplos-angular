@@ -1,0 +1,23 @@
+<div class="productos-container">
+    <h2>Lista de Productos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (producto of productos; track producto.id) {
+                <tr>
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.precio | currency: "PEN" : "S/ " }}</td>
+                    <td>{{ producto.cantidad }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
