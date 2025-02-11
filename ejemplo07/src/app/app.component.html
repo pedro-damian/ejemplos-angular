@@ -1,0 +1,32 @@
+<form #formUsuario="ngForm" (ngSubmit)="enviarFormulario()">
+    <div>
+        <label>Nombre:</label>
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingrese su nombre"
+            [(ngModel)]="nombre"
+            required
+        />
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingrese su email"
+            [(ngModel)]="email"
+            required
+        />
+    </div>
+
+    <button type="submit">Enviar</button>
+</form>
+<p>Nombre Ingresado: {{ nombre }}</p>
+
+<p>Email Ingresado: {{ email }}</p>
+
+<router-outlet />
