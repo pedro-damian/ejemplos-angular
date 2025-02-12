@@ -1,0 +1,18 @@
+<div class="buscador-container">
+    <h2>Buscador de Usuarios</h2>
+    <input
+        type="text"
+        placeholder="Buscar usuario..."
+        [(ngModel)]="busqueda"
+        (input)="buscar()"
+    />
+    <button *ngIf="busqueda" (click)="limpiarBusqueda()">Limpiar</button>
+
+    <ul *ngIf="resultados.length > 0">
+        <li *ngFor="let usuario of resultados">{{ usuario }}</li>
+    </ul>
+
+    <p *ngIf="busqueda && resultados.length === 0">
+        No se encontraron usuarios que coincidan con la búsqueda.
+    </p>
+</div>

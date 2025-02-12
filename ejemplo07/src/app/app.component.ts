@@ -1,22 +1,22 @@
-import { CommonModule } from "@angular/common";
+//import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { RouterOutlet } from "@angular/router";
+//import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: "app-root",
-  imports: [RouterOutlet, FormsModule],
+  imports: [FormsModule],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
 export class AppComponent {
   title = "ejemplo07";
 
-  nombre: string = "";
-  email: string = "";
+  // nombre: string = "";
+  // email: string = "";
+  usuario = { nombre: "", email: "" };
 
   enviarFormulario() {
-    console.log("Nombre:", this.nombre);
-    console.log("Email:", this.email);
+    console.log("Formulario enviado:", this.usuario);
   }
 }
