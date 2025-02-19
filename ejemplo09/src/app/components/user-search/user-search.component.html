@@ -1,0 +1,10 @@
+<h1>Filtrar Usuarios</h1>
+
+<input type="text" [formControl]="searchcontrol" placeholder="Buscar Usuario">
+<hr>
+
+<ul>
+    <li *ngFor="let user of filteredUsers()">
+        {{user}}
+    </li>
+</ul>
